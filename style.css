@@ -67,7 +67,8 @@ h1 {
   color: #000;
   font-weight: bold;
   cursor: pointer;
-  width: 20%;
+  width: 22%;
+  font-size: 20px;
 }
 .report button:hover { background: #ffaa00; }
 
@@ -202,6 +203,7 @@ h4 {
   margin: 10px 0 5px 0;
   color: #ffcc00;
   text-align: left;
+  font-size: 30px;
 }
 
 
@@ -209,11 +211,14 @@ h4 {
 .order-item {
   background: #333; padding: 5px 10px; margin: 5px 0;
   border-radius: 6px; display: flex; justify-content: space-between;
+  font-size: 25px;
 }
-.order-item button { background: #ff4444; color: #fff; border: none; border-radius: 4px; padding: 2px 6px; cursor: pointer; }
+.order-item button { background: #ff4444; color: #fff; border: none; 
+    border-radius: 4px; padding: 13px 13px;
+    font-size: 20px; cursor: pointer; }
 .order-item button:hover { background: #ff0000; }
 
-#menuTotal { margin-top: 10px; font-weight: bold; color: #00ff88; }
+#menuTotal { margin-top: 10px; font-weight: bold; font-size: 25px; color: #00ff88; }
 
 .top-controls { text-align: center; margin-bottom: 20px; }
 .reset-all-btn {
@@ -244,6 +249,7 @@ h4 {
   margin: 0 0 15px 0;
   color: #ffcc00;
   text-shadow: 0 0 8px #ffaa00;
+  font-size: 35px;
 }
 
 .kabinet button {
@@ -269,7 +275,7 @@ h4 {
   background: #222;
   padding: 25px;
   width: 90%;
-  max-width: 600px; /* böyüdülmüş */
+  max-width: 900px; 
   border-radius: 12px;
   text-align: center;
   max-height: 90vh;
@@ -291,11 +297,15 @@ h4 {
   font-size: 18px; /* yazılar böyük */
   box-sizing: border-box;
   transition: transform 0.2s, box-shadow 0.2s;
+  font-size: 25px;
 }
 
 .menu-card:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px #ffaa00;
+}
+h3{
+    font-size: 30px;
 }
 
 /* Close düyməsi */
@@ -306,10 +316,11 @@ h4 {
   color: #fff;
   border: none;
   border-radius: 6px;
-  padding: 8px 12px;
+  padding: 20px 20px;
   cursor: pointer;
   margin-bottom: 10px;
   z-index: 10;
+  font-size: 25px;
 }
 .close-btn:hover { background: #ff0000; }
 
@@ -351,5 +362,6 @@ h2 {
     text-align: center;
     color: #00eaff; /* istəsən rəngini dəyişə bilərsən */
     text-shadow: 0 0 10px #00eaff; /* effekt üçün */
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    font-size:  40px;
 }
