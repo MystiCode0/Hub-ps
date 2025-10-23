@@ -14,6 +14,7 @@ h1 {
   margin-bottom: 30px;
 }
 
+
 .kabinet {
   background: #1e1e2f;
   border: 1px solid #333;
@@ -220,3 +221,131 @@ h4 {
 .reset-all-btn:hover { background: #ff0000; transform: scale(1.05); }
 
 
+/* --- Kabinet və Masa divləri --- */
+.kabinet {
+  background: #1e1e2f;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 10px;
+  width: calc(70% - 20px); /* 2 div yan-yana */
+  display: inline-block;
+  vertical-align: top;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  transition: transform 0.2s, background 0.3s;
+  font-size: 16px; /* yazılar böyük olsun */
+  text-align: center;
+}
+
+/* --- Başlıqlar və düymələr --- */
+.kabinet h3 {
+  margin: 0 0 15px 0;
+  color: #ffcc00;
+  text-shadow: 0 0 8px #ffaa00;
+}
+
+.kabinet button {
+  margin: 7px;
+  padding: 10px 16px;
+  border: none;
+  background: #00eaff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s, transform 0.2s;
+}
+.kabinet button:hover {
+  background: #00bcd4;
+  transform: translateY(-2px);
+}
+
+/* --- Menu overlay --- */
+#overlayMenu .menu-content {
+  background: #222;
+  padding: 25px;
+  width: 90%;
+  max-width: 600px; /* böyüdülmüş */
+  border-radius: 12px;
+  text-align: center;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/* Menu kartları böyüdülmüş */
+.menu-card {
+  display: inline-block;
+  background: #333;
+  border-radius: 10px;
+  padding: 18px 12px; /* daha böyük kart */
+  margin: 8px;
+  width: calc(48% - 16px); /* bir sətirdə 2 kart */
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  font-size: 18px; /* yazılar böyük */
+  box-sizing: border-box;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ffaa00;
+}
+
+/* Close düyməsi */
+.close-btn {
+  position: sticky;
+  top: 0;
+  background: #ff4444;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  z-index: 10;
+}
+.close-btn:hover { background: #ff0000; }
+
+/* Responsive dizayn (iPhone 11, 12, 13, 14) */
+@media screen and (max-width: 768px) {
+  .kabinet {
+    width: 48%; /* 2 div yan-yana */
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  .menu-card {
+    width: calc(48% - 16px); /* bir sətirdə 2 menu kart */
+    padding: 16px 10px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .kabinet {
+    width: 90%; /* mobil tam genişlik */
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .menu-card {
+    width: 100%; /* 1 kart sətirində */
+    padding: 20px;
+    font-size: 18px;
+  }
+}
+
+/* Kabinetləri ortala */
+#kabinetler, #masalar, #bilyard {
+  text-align: center;
+}
+
+h2 {
+    text-align: center;
+    color: #00eaff; /* istəsən rəngini dəyişə bilərsən */
+    text-shadow: 0 0 10px #00eaff; /* effekt üçün */
+    margin-bottom: 20px;
+}
