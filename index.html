@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <title>🎮 Hub Zal Sistemi</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <h1>🎮 Hub Zal Sistemi</h1>
+  <div class="top-controls">
+    <button class="reset-all-btn" onclick="resetAllKabinet()">Bütün Kabinetləri Boşaltmaq</button>
+  </div>
+
+  <!-- Kabinetlər -->
+  <div id="kabinetler"></div>
+
+  <!-- Masalar -->
+  <h2>🪑 Masalar</h2>
+  <div id="masalar"></div>
+
+  <h2>🎱 Bilyard</h2>
+  <div id="bilyard" >
+  </div>
+
+  <!-- Hesabat -->
+  <div class="report">
+    <h2>📊 Hesabat</h2>
+    <button onclick="showReport('daily')">Günlük</button>
+    <button onclick="showReport('weekly')">Həftəlik</button>
+    <button onclick="showReport('monthly')">Aylıq</button>
+    <button onclick="resetReports()">Hesabatı Sıfırla</button>
+    <div id="reportTable"></div>
+    <canvas id="reportChart" style="max-width:100%; display:none;"></canvas>
+    <div class="total-income" id="totalIncome"></div>
+  </div>
+
+  <!-- Menu overlay -->
+  <div id="overlayMenu">
+    <div class="menu-content">
+      <button class="close-btn" onclick="closeMenu()">X</button>
+      <h3 id="menuKabinetTitle">Kabinet Menyu</h3>
+
+      <h4>🍹 İçkilər</h4>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Qara çay',2)">Qara çay<br>2 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Qara çay mürəbbəli',4)">Qara çay mürəbbəli<br>4 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Qara çay şokoladlı',4)">Qara çay şokoladlı<br>4 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Xırdalan No Filtr',3)">Xırdalan No Filtr<br>3 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'NZS',2)">NZS<br>2 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Cola',2)">Cola<br>2 AZN</div>
+
+      <h4>🍴 Məzələr</h4>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Pendir sadə',2.5)">Pendir sadə<br>2.50 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Pendir qızartma',3.5)">Pendir qızartma<br>3.50 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Düşbərə',4)">Düşbərə<br>4 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Pətənə',4)">Pətənə<br>4 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Boğaz',3)">Boğaz<br>3 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Krvetka',7)">Krvetka<br>7 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Bildirçin',4)">Bildirçin<br>4 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Toyuq popkorn',4.5)">Toyuq popkorn<br>4.50 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Basdırma',5)">Basdırma<br>5 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Şamayka',5)">Şamayka<br>5 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Fri',3)">Fri<br>3 AZN</div>
+
+      <h4>💨 Qəlyan</h4>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Sadə qəlyan',7)">Sadə qəlyan<br>7 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Alma',10)">Alma<br>10 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Qreypfrut',12)">Qreypfrut<br>12 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Ananas',18)">Ananas<br>18 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Qarpız',20)">Qarpız<br>20 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Yemiş',20)">Yemiş<br>20 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Pramida',35)">Pramida<br>35 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Qəlyan çaxır',30)">Qəlyan çaxır<br>30 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Qəlyan redbull',25)">Qəlyan redbull<br>25 AZN</div>
+      <div class="menu-card" onclick="addOrder(currentMenuKabinet,'Südlə',15)">Südlə<br>15 AZN</div>
+
+      <div id="selectedOrders"></div>
+      <div id="menuTotal">Ümumi: 0 AZN</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
